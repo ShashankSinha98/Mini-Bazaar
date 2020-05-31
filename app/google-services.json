@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "984091029482",
+    "firebase_url": "https://mini-bazaar-61e5b.firebaseio.com",
+    "project_id": "mini-bazaar-61e5b",
+    "storage_bucket": "mini-bazaar-61e5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984091029482:android:c70d3c6d5a47c7706fcc93",
+        "android_client_info": {
+          "package_name": "com.example.minibazaar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984091029482-i4o62emd0lu08u6jetbt3071jjj9cj4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAllGm7CSAB7HXOAYWdC6_VQEUaFKkUXPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984091029482-i4o62emd0lu08u6jetbt3071jjj9cj4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

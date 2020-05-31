@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/gradient_background"
+    tools:context=".Activities.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center"
+            android:theme="@style/AppTheme"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:textSize="45sp"
+                android:id="@+id/appname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"/>
+
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilepic"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="1dp"
+                    android:src="@drawable/user"/>
+
+                <ImageView
+                    android:id="@+id/uploadpic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:elevation="4dp"
+                    android:layout_alignBottom="@+id/profilepic"
+                    android:layout_alignRight="@+id/profilepic"
+                    android:src="@drawable/uploadpic"/>
+
+            </RelativeLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                app:met_iconLeft="@drawable/man"
+                app:met_floatingLabel="highlight"
+                app:met_baseColor="@color/colorAccent"
+                app:met_clearButton="true"
+                app:met_primaryColor="@color/colorAccent"
+                app:met_errorColor="@color/darkWhite"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"
+                app:met_floatingLabel="highlight"
+                app:met_iconLeft="@android:drawable/sym_action_email"
+                app:met_baseColor="@color/colorAccent"
+                app:met_errorColor="@color/darkWhite"
+                app:met_primaryColor="@color/colorAccent"
+                app:met_clearButton="true"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Password"
+                app:met_iconLeft="@drawable/lock"
+                app:met_floatingLabel="highlight"
+                android:inputType="textPassword"
+                app:met_errorColor="@color/darkWhite"
+                app:met_baseColor="@color/colorAccent"
+                app:met_primaryColor="@color/colorAccent"
+                app:met_clearButton="true"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/confirmpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reenter Password"
+                app:met_iconLeft="@drawable/lock"
+                app:met_floatingLabel="highlight"
+                app:met_baseColor="@color/colorAccent"
+                app:met_clearButton="true"
+                app:met_errorColor="@color/darkWhite"
+                app:met_primaryColor="@color/colorAccent"
+                android:inputType="textPassword"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"
+                app:met_iconLeft="@android:drawable/stat_sys_phone_call"
+                app:met_floatingLabel="highlight"
+                app:met_baseColor="@color/colorAccent"
+                app:met_errorColor="@color/darkWhite"
+                app:met_clearButton="true"
+                app:met_primaryColor="@color/colorAccent"
+                android:inputType="number"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/register"
+                    android:text="@string/register"
+                    style="@style/AppTheme.RoundedCornerMaterialButton"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/forgot_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forgot"
+                    style="@style/fonts"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    style="@style/fonts"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/login_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/fonts"
+                    android:text="@string/login_now"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

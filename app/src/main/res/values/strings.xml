@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Mini Bazaar</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Exclusive Products</string>
+    <string name="slide_1_desc">Get products which are unique and only available at our shops !</string>
+
+    <string name="slide_2_title">Cheap Rates</string>
+    <string name="slide_2_desc">Products at such an affordable rates !</string>
+
+    <string name="slide_3_title">Hassle Free Payments</string>
+    <string name="slide_3_desc">With various pay options , you can easily pay in a minute !</string>
+
+    <string name="slide_4_title">Fast Delivery</string>
+    <string name="slide_4_desc">Blazing fast order delivery within time !</string>
+
+
+    <string name="title_activity_registration">Registration</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="register">Register</string>
+    <string name="about_activity_title">About Us</string>
+    <string name="about_activity_description"><b>Boost Your Brand and Company Image with Premium Online Printing Services from Us ! </b></string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="domain">Domain</string>
+    <string name="website">BeingDev.com</string>
+    <string name="licence">License</string>
+    <string name="licencedesc">Lorem Ipsum</string>
+    <string name="changelog">Changelog</string>
+    <string name="changes">Lorem Ipsum</string>
+    <string name="login">Login</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="forgot">Forgot Password</string>
+    <string name="register_now">Register Now</string>
+    <string name="already_mem">Already a member ? </string>
+    <string name="login_now">Login Now</string>
+
+    <!--Navigation drawer items-->
+    <string name="home">Home</string>
+    <string name="myprofile">Profile</string>
+    <string name="myorders">My Orders</string>
+    <string name="cart">Cart</string>
+    <string name="logout">Logout</string>
+    <string name="feedback">Feedback</string>
+    <string name="aboutapp">About App</string>
+    <string name="rate">Rate Us</string>
+    <string name="helpcentre">Help Center</string>
+    <string name="noconnection">Kindly connect to a WIFI network or enable Mobile Data</string>
+    <string name="help">In case of any query feel free to reach us at : \n    beingdev.com@gmail.com\n\nYou can also Call us at our helpline numbers : \n     +91-9291299322 \n     +91-8732883291</string>
+    <string name="magic_points">Magic Points</string>
+    <string name="orders_placed">Orders Placed</string>
+    <string name="items_incart">Items inCart</string>
+    <string name="my_profile">My Profile</string>
+    <string name="update_details">Update Details</string>
+    <string name="update">Update</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="back">Back</string>
+    <string name="registermail1">\n This is Shashank Sinha , CEO of Mini Bazaar ! \n\nWelcome onboard with us on behalf of our team !\n
+    We promise to provide unforgettable shopping experience to you in future ! \n\n
+    So What are you waiting for , start shopping and get best of our products right at your doorstep !
+    \n\n
+    We are happy to help you ! In case of any query contact us at our handles mentioned below !\n\n
+    Phone : +91-9650908741\n
+    Email : sinhashashank.98@gmail.com\n
+    Address : B-5/384, Yamuna Vihar, Delhi ( 110053 )</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="examples">
+        <item>Custom Printing</item>
+        <item>Fast Turnaround</item>
+        <item>Prices</item>
+        <item>Wide Range Products</item>
+        <item>Unique Products</item>
+        <item>Stylish Items</item>
+    </string-array>
+</resources>

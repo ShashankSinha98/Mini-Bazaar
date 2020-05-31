@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="material_drawer_accent">@color/materialize_accent</color>
+    <color name="material_drawer_background">@color/md_white_1000</color>
+    <color name="material_drawer_dark_background">@color/md_dark_background</color>
+    <color name="material_drawer_dark_divider">@color/md_dark_dividers</color>
+    <color name="material_drawer_dark_header_selection_subtext">@color/material_drawer_dark_secondary_text</color>
+    <color name="material_drawer_dark_header_selection_text">
+        @color/material_drawer_dark_primary_text
+    </color>
+    <color name="material_drawer_dark_hint_icon">@color/md_dark_disabled</color>
+    <color name="material_drawer_dark_hint_text">@color/md_dark_disabled</color>
+    <color name="material_drawer_dark_primary_icon">@color/md_dark_primary_icon</color>
+    <color name="material_drawer_dark_primary_text">@color/md_dark_primary_text</color>
+    <color name="material_drawer_dark_secondary_text">@color/md_dark_secondary</color>
+    <color name="material_drawer_dark_selected">#1F2196F3</color>
+    <color name="material_drawer_dark_selected_legacy">#202020</color>
+    <color name="material_drawer_dark_selected_text">@color/material_drawer_primary</color>
+    <color name="material_drawer_divider">@color/md_light_dividers</color>
+    <color name="material_drawer_header_selection_subtext">@color/material_drawer_secondary_text</color>
+    <color name="material_drawer_header_selection_text">@color/material_drawer_primary_text</color>
+    <color name="material_drawer_hint_icon">@color/md_light_disabled</color>
+    <color name="material_drawer_hint_text">@color/md_light_disabled</color>
+    <color name="material_drawer_primary">@color/materialize_primary</color>
+    <color name="material_drawer_primary_dark">@color/materialize_primary_dark</color>
+    <color name="material_drawer_primary_icon">@color/md_light_secondary</color>
+    <color name="material_drawer_primary_light">@color/materialize_primary_light</color>
+    <color name="material_drawer_primary_text">@color/md_light_primary_text</color>
+    <color name="material_drawer_secondary_text">@color/md_light_secondary</color>
+    <color name="material_drawer_selected">#1F2196F3</color>
+    <color name="material_drawer_selected_legacy">#E8E8E8</color>
+    <color name="material_drawer_selected_text">@color/material_drawer_primary</color>
+    <dimen name="material_drawer_account_header_compact">56dp</dimen>
+    <dimen name="material_drawer_account_header_dropdown">22dp</dimen>
+    <dimen name="material_drawer_account_header_dropdown_guideline">80dp</dimen>
+    <dimen name="material_drawer_account_header_dropdown_margin_bottom">18dp</dimen>
+    <dimen name="material_drawer_account_header_dropdown_padding">5dp</dimen>
+    <dimen name="material_drawer_account_header_height">160dp</dimen>
+    <dimen name="material_drawer_account_header_height_compact">72dp</dimen>
+    <dimen name="material_drawer_account_header_horizontal_bottom">4dp</dimen>
+    <dimen name="material_drawer_account_header_horizontal_top">16dp</dimen>
+    <dimen name="material_drawer_account_header_non_compact_padding">56dp</dimen>
+    <dimen name="material_drawer_account_header_secondary">40dp</dimen>
+    <dimen name="material_drawer_account_header_selected">56dp</dimen>
+    <dimen name="material_drawer_account_header_subtext">13sp</dimen>
+    <dimen name="material_drawer_account_header_title">20sp</dimen>
+    <dimen name="material_drawer_item_background_padding_start_end">8dp</dimen>
+    <dimen name="material_drawer_item_background_padding_top_bottom">4dp</dimen>
+    <dimen name="material_drawer_item_corner_radius">4dp</dimen>
+    <dimen name="material_drawer_item_padding">8dp</dimen>
+    <dimen name="material_drawer_item_primary">48dp</dimen>
+    <dimen name="material_drawer_item_primary_description">14sp</dimen>
+    <dimen name="material_drawer_item_primary_icon">56dp</dimen>
+    <dimen name="material_drawer_item_primary_icon_padding">12dp</dimen>
+    <dimen name="material_drawer_item_primary_icon_padding_right">32dp</dimen>
+    <dimen name="material_drawer_item_primary_text">14sp</dimen>
+    <dimen name="material_drawer_item_profile">72dp</dimen>
+    <dimen name="material_drawer_item_profile_description">14sp</dimen>
+    <dimen name="material_drawer_item_profile_icon">40dp</dimen>
+    <dimen name="material_drawer_item_profile_icon_padding">16dp</dimen>
+    <dimen name="material_drawer_item_profile_icon_padding_right">8dp</dimen>
+    <dimen name="material_drawer_item_profile_icon_width">48dp</dimen>
+    <dimen name="material_drawer_item_profile_setting_icon_padding">24dp</dimen>
+    <dimen name="material_drawer_item_profile_text">14sp</dimen>
+    <dimen name="material_drawer_item_secondary">42dp</dimen>
+    <dimen name="material_drawer_item_secondary_description">12sp</dimen>
+    <dimen name="material_drawer_item_secondary_extra_text">12sp</dimen>
+    <dimen name="material_drawer_item_secondary_icon">56dp</dimen>
+    <dimen name="material_drawer_item_secondary_icon_padding">12dp</dimen>
+    <dimen name="material_drawer_item_secondary_icon_padding_right">36dp</dimen>
+    <dimen name="material_drawer_item_secondary_text">14sp</dimen>
+    <dimen name="material_drawer_item_section_text">14sp</dimen>
+    <dimen name="material_drawer_margin">0dp</dimen>
+    <dimen name="material_drawer_padding">8dp</dimen>
+    <dimen name="material_drawer_sticky_footer_elevation">4dp</dimen>
+    <dimen name="material_drawer_vertical_padding">16dp</dimen>
+    <dimen name="material_drawer_width">320dp</dimen>
+    <dimen name="material_mini_drawer_item">72dp</dimen>
+    <dimen name="material_mini_drawer_item_badge_text">12sp</dimen>
+    <dimen name="material_mini_drawer_item_icon">56dp</dimen>
+    <dimen name="material_mini_drawer_item_icon_padding">16dp</dimen>
+    <dimen name="material_mini_drawer_item_padding">4dp</dimen>
+    <dimen name="material_mini_drawer_item_padding_sides">8dp</dimen>
+    <dimen name="material_mini_drawer_item_profile_icon">40dp</dimen>
+    <dimen name="material_mini_drawer_item_profile_icon_padding">16dp</dimen>
+    <item name="material_drawer_animation" type="id"/>
+    <item name="material_drawer_item" type="id"/>
+    <item name="material_drawer_item_container" type="id"/>
+    <item name="material_drawer_item_divider" type="id"/>
+    <item name="material_drawer_item_expandable" type="id"/>
+    <item name="material_drawer_item_expandable_badge" type="id"/>
+    <item name="material_drawer_item_mini" type="id"/>
+    <item name="material_drawer_item_mini_profile" type="id"/>
+    <item name="material_drawer_item_primary" type="id"/>
+    <item name="material_drawer_item_primary_switch" type="id"/>
+    <item name="material_drawer_item_primary_toggle" type="id"/>
+    <item name="material_drawer_item_profile" type="id"/>
+    <item name="material_drawer_item_profile_setting" type="id"/>
+    <item name="material_drawer_item_secondary" type="id"/>
+    <item name="material_drawer_item_secondary_switch" type="id"/>
+    <item name="material_drawer_item_secondary_toggle" type="id"/>
+    <item name="material_drawer_item_section" type="id"/>
+    <item name="material_drawer_menu_default_group" type="id"/>
+    <item name="material_drawer_profile_header" type="id"/>
+    <item name="material_drawer_slider_layout" type="id"/>
+    <item name="material_drawer_sticky_footer" type="id"/>
+    <item name="material_drawer_sticky_header" type="id"/>
+    <string name="define_materialdrawer">year;owner</string>
+    <string name="library_materialdrawer_author">Mike Penz</string>
+    <string name="library_materialdrawer_authorWebsite">http://mikepenz.com/</string>
+    <string name="library_materialdrawer_isOpenSource">true</string>
+    <string name="library_materialdrawer_libraryDescription">
+        <![CDATA[
+        <b>MaterialDrawer</b> the flexible, easy to use, all in one drawer library for your Android project.
+        ]]>
+    </string>
+    <string name="library_materialdrawer_libraryName">MaterialDrawer</string>
+    <string name="library_materialdrawer_libraryVersion">@string/materialdrawer_lib_version</string>
+    <string name="library_materialdrawer_libraryWebsite">https://github.com/mikepenz/MaterialDrawer</string>
+    <string name="library_materialdrawer_licenseId">apache_2_0</string>
+    <string name="library_materialdrawer_owner">Mike Penz</string>
+    <string name="library_materialdrawer_repositoryLink">https://github.com/mikepenz/MaterialDrawer</string>
+    <string name="library_materialdrawer_year">2018</string>
+    <string name="material_drawer_close">Close</string>
+    <string name="material_drawer_open">Open</string>
+    <string name="materialdrawer_lib_version" translatable="false">6.1.1</string>
+    <style name="BezelImageView">
+        <item name="biv_maskDrawable">@drawable/material_drawer_circle_mask</item>
+        <item name="biv_drawCircularShadow">true</item>
+        <item name="biv_selectorOnPress">@color/material_drawer_primary</item>
+    </style>
+    <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/white</item>
+    </style>
+    <style name="MaterialDrawer.Light.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/black</item>
+    </style>
+    <style name="MaterialDrawerTheme" parent="MaterialTheme">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_dark_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_dark_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_dark_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_dark_secondary_text
+        </item>
+        <item name="material_drawer_hint_text">@color/material_drawer_dark_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_dark_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_dark_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_dark_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_dark_selected_legacy
+        </item>
+        <item name="material_drawer_selected_text">@color/material_drawer_dark_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_dark_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_dark_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.ActionBar" parent="MaterialTheme.ActionBar">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_dark_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_dark_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_dark_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_dark_secondary_text
+        </item>
+        <item name="material_drawer_hint_text">@color/material_drawer_dark_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_dark_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_dark_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_dark_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_dark_selected_legacy
+        </item>
+        <item name="material_drawer_selected_text">@color/material_drawer_dark_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_dark_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_dark_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.ActionBar.TranslucentStatus" parent="MaterialTheme.ActionBar.TranslucentStatus">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_dark_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_dark_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_dark_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_dark_secondary_text
+        </item>
+        <item name="material_drawer_hint_text">@color/material_drawer_dark_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_dark_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_dark_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_dark_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_dark_selected_legacy
+        </item>
+        <item name="material_drawer_selected_text">@color/material_drawer_dark_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_dark_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_dark_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light" parent="MaterialTheme.Light">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.Light.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_selected_legacy</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.ActionBar" parent="MaterialTheme.Light.ActionBar">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.Light.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_selected_legacy</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.ActionBar.TranslucentStatus" parent="MaterialTheme.Light.ActionBar.TranslucentStatus">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.Light.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_selected_legacy</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.DarkToolbar" parent="MaterialTheme.Light.DarkToolbar">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_selected_legacy</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.DarkToolbar.ActionBar" parent="MaterialTheme.Light.DarkToolbar.ActionBar">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_selected_legacy</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.DarkToolbar.ActionBar.TranslucentStatus" parent="MaterialTheme.Light.DarkToolbar.ActionBar.TranslucentStatus">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_selected_legacy</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus" parent="MaterialTheme.Light.DarkToolbar.TranslucentStatus">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_selected_legacy</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.TranslucentStatus" parent="MaterialTheme.Light.TranslucentStatus">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.Light.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_selected_legacy</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.TranslucentStatus" parent="MaterialTheme.TranslucentStatus">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_dark_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_dark_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_dark_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_dark_secondary_text
+        </item>
+        <item name="material_drawer_hint_text">@color/material_drawer_dark_hint_text</item>
+        <item name="material_drawer_hint_icon">@color/material_drawer_dark_hint_icon</item>
+        <item name="material_drawer_divider">@color/material_drawer_dark_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_dark_selected</item>
+        <item name="material_drawer_selected_legacy">@color/material_drawer_dark_selected_legacy
+        </item>
+        <item name="material_drawer_selected_text">@color/material_drawer_dark_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_dark_header_selection_text
+        </item>
+        <item name="material_drawer_header_selection_subtext">
+            @color/material_drawer_dark_header_selection_subtext
+        </item>
+        <item name="material_drawer_legacy_style">false</item>
+    </style>
+    <declare-styleable name="BezelImageView">
+        <attr format="reference" name="biv_maskDrawable"/>
+        <attr format="boolean" name="biv_drawCircularShadow"/>
+        <attr format="color|reference" name="biv_selectorOnPress"/>
+    </declare-styleable>
+    <declare-styleable name="MaterialDrawer">
+        <attr format="color|reference" name="material_drawer_window_background"/>
+        <attr format="color|reference" name="material_drawer_background"/>
+
+        <attr format="color|reference" name="material_drawer_primary_text"/>
+        <attr format="color|reference" name="material_drawer_primary_icon"/>
+        <attr format="color|reference" name="material_drawer_secondary_text"/>
+        <attr format="color|reference" name="material_drawer_hint_text"/>
+        <attr format="color|reference" name="material_drawer_hint_icon"/>
+        <attr format="color|reference" name="material_drawer_divider"/>
+
+        <attr format="color|reference" name="material_drawer_selected"/>
+        <attr format="color|reference" name="material_drawer_selected_legacy"/> <!-- defines material design 1.0 color -->
+        <attr format="color|reference" name="material_drawer_selected_text"/>
+        <!-- material drawer header attrs-->
+        <attr format="color|reference" name="material_drawer_header_selection_text"/>
+        <attr format="color|reference" name="material_drawer_header_selection_subtext"/>
+
+        <!-- allows to enable / disable legacy style e.g. material 1 -->
+        <attr format="boolean|reference" name="material_drawer_legacy_style"/>
+    </declare-styleable>
+
+    <dimen name="materialize_avatar">40dp</dimen>
+    <dimen name="materialize_baseline_grid">8dp</dimen>
+    <dimen name="materialize_baseline_grid_small">4dp</dimen>
+    <dimen name="materialize_baseline_grid_x10">80dp</dimen>
+    <dimen name="materialize_baseline_grid_x2">16dp</dimen>
+    <dimen name="materialize_baseline_grid_x3">24dp</dimen>
+    <dimen name="materialize_baseline_grid_x4">32dp</dimen>
+    <dimen name="materialize_baseline_grid_x5">40dp</dimen>
+    <dimen name="materialize_baseline_grid_x6">48dp</dimen>
+    <dimen name="materialize_baseline_grid_x7">56dp</dimen>
+    <dimen name="materialize_baseline_grid_x8">64dp</dimen>
+    <dimen name="materialize_baseline_grid_x9">72dp</dimen>
+    <dimen name="materialize_content_margin_with_icon">72dp</dimen>
+    <dimen name="materialize_icon">24dp</dimen>
+    <dimen name="materialize_listitem">72dp</dimen>
+    <dimen name="materialize_right_side_icon_margin">32dp</dimen>
+    <dimen name="materialize_screen_edge">16dp</dimen>
+    <dimen name="materialize_spacing">8dp</dimen>
+    <dimen name="materialize_statusbar">24dp</dimen>
+    <dimen name="materialize_subtitle">48dp</dimen>
+    <dimen name="materialize_toolbar">56dp</dimen>
+    <dimen name="materialize_touch_target">48dp</dimen>
+    <dimen name="materialize_typography_body1">14sp</dimen>
+    <dimen name="materialize_typography_body2">14sp</dimen>
+    <dimen name="materialize_typography_caption">12sp</dimen>
+    <dimen name="materialize_typography_display1">34sp</dimen>
+    <dimen name="materialize_typography_headline">24sp</dimen>
+    <dimen name="materialize_typography_subheading">16sp</dimen>
+    <dimen name="materialize_typography_title">20sp</dimen>
+    <dimen name="tool_bar_top_padding">0dp</dimen>
+    <item name="materialize_root" type="id"/>
+    <string name="define_materialize">year;owner</string>
+    <string name="library_materialize_author">Mike Penz</string>
+    <string name="library_materialize_authorWebsite">http://mikepenz.com/</string>
+    <string name="library_materialize_isOpenSource">true</string>
+    <string name="library_materialize_libraryDescription">
+        <![CDATA[
+        <b>Materialize</b> comes with useful helper classes, the complete material color palette, and many additional utils. Use its theme as base. Let it manage your StatusBar, NavigationBar, Fullscreen behavior&#8230;
+        ]]>
+    </string>
+    <string name="library_materialize_libraryName">Materialize</string>
+    <string name="library_materialize_libraryVersion">@string/materialize_lib_version</string>
+    <string name="library_materialize_libraryWebsite">https://github.com/mikepenz/Materialize</string>
+    <string name="library_materialize_licenseId">apache_2_0</string>
+    <string name="library_materialize_owner">Mike Penz</string>
+    <string name="library_materialize_repositoryLink">https://github.com/mikepenz/Materialize</string>
+    <string name="library_materialize_year">2016</string>
+    <string name="materialize_lib_version" translatable="false">1.2.0</string>
+    <style name="Material.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/white</item>
+    </style>
+    <style name="Material.Light.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/black</item>
+    </style>
+    <style name="MaterialBaseBaseTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/Material.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/materialize_primary</item>
+        <item name="colorPrimaryDark">@color/materialize_primary_dark</item>
+        <item name="colorAccent">@color/materialize_accent</item>
+
+        <!-- Material specific values -->
+    </style>
+    <style name="MaterialBaseBaseTheme.Light" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/Material.Light.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/materialize_primary</item>
+        <item name="colorPrimaryDark">@color/materialize_primary_dark</item>
+        <item name="colorAccent">@color/materialize_accent</item>
+
+        <!-- Material specific values -->
+    </style>
+    <style name="MaterialBaseBaseTheme.Light.DarkToolbar" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/Material.DrawerArrowStyle</item>
+
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/materialize_primary</item>
+        <item name="colorPrimaryDark">@color/materialize_primary_dark</item>
+        <item name="colorAccent">@color/materialize_accent</item>
+
+        <!-- Material specific values -->
+    </style>
+    <style name="MaterialBaseTheme" parent="MaterialBaseBaseTheme"/>
+    <style name="MaterialBaseTheme.Light" parent="MaterialBaseBaseTheme.Light"/>
+    <style name="MaterialBaseTheme.Light.DarkToolbar" parent="MaterialBaseBaseTheme.Light.DarkToolbar"/>
+    <style name="MaterialTheme" parent="MaterialBaseTheme"/>
+    <style name="MaterialTheme.ActionBar" parent="MaterialTheme">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+    <style name="MaterialTheme.ActionBar.DayNight" parent="MaterialTheme.Light.ActionBar"/>
+    <style name="MaterialTheme.ActionBar.TranslucentStatus" parent="MaterialTheme.ActionBar"/>
+    <style name="MaterialTheme.ActionBar.TranslucentStatus.DayNight" parent="MaterialTheme.Light.ActionBar.TranslucentStatus"/>
+    <style name="MaterialTheme.DarkToolbar.ActionBar.DayNight" parent="MaterialTheme.Light.DarkToolbar.ActionBar"/>
+    <style name="MaterialTheme.DarkToolbar.ActionBar.TranslucentStatus.DayNight" parent="MaterialTheme.Light.DarkToolbar.ActionBar.TranslucentStatus"/>
+    <style name="MaterialTheme.DarkToolbar.DayNight" parent="MaterialTheme.Light.DarkToolbar"/>
+    <style name="MaterialTheme.DarkToolbar.TranslucentStatus.DayNight" parent="MaterialTheme.Light.DarkToolbar.TranslucentStatus"/>
+    <style name="MaterialTheme.DayNight" parent="MaterialTheme.Light"/>
+    <style name="MaterialTheme.Light" parent="MaterialBaseTheme.Light"/>
+    <style name="MaterialTheme.Light.ActionBar" parent="MaterialTheme.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+    <style name="MaterialTheme.Light.ActionBar.TranslucentStatus" parent="MaterialTheme.Light.ActionBar"/>
+    <style name="MaterialTheme.Light.DarkToolbar" parent="MaterialBaseTheme.Light.DarkToolbar"/>
+    <style name="MaterialTheme.Light.DarkToolbar.ActionBar" parent="MaterialTheme.Light.DarkToolbar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+
+        <!-- only set this if we use an ActionBar -->
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark</item>
+    </style>
+    <style name="MaterialTheme.Light.DarkToolbar.ActionBar.TranslucentStatus" parent="MaterialTheme.Light.DarkToolbar"/>
+    <style name="MaterialTheme.Light.DarkToolbar.TranslucentStatus" parent="MaterialTheme.Light.DarkToolbar"/>
+    <style name="MaterialTheme.Light.TranslucentStatus" parent="MaterialTheme.Light"/>
+    <style name="MaterialTheme.TranslucentStatus" parent="MaterialTheme"/>
+    <style name="MaterialTheme.TranslucentStatus.DayNight" parent="MaterialTheme.Light.TranslucentStatus"/>
+    <style name="Widget.Materialize.ScrimInsetsRelativeLayout" parent="">
+        <item name="sirl_insetForeground">#4000</item>
+    </style>
+
+    <declare-styleable name="ScrimInsetsRelativeLayout">
+        <attr format="reference|color" name="sirl_insetForeground"/>
+    </declare-styleable>
+    <declare-styleable name="ScrimInsetsView">
+        <attr format="reference|color" name="siv_insetForeground"/>
+    </declare-styleable>
+</resources>
