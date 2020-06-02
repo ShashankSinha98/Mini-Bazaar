@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.minibazaar.NetworkSync.CheckInternetConnection;
+import com.example.minibazaar.ProductsCategory.CardsActivity;
 import com.example.minibazaar.R;
 import com.example.minibazaar.UserSession.UserSession;
 import com.getkeepsafe.taptargetview.TapTarget;
@@ -347,7 +348,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cardsActivity(View view) {
-        //startActivity(new Intent(MainActivity.this, Cards.class));
+        startActivity(new Intent(MainActivity.this, CardsActivity.class));
     }
 
     public void viewCart(View view) {

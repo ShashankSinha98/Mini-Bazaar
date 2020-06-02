@@ -16,8 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
-        <activity android:name=".Activities.ProfileActivity"
-            android:theme="@style/OriginalThemeNoActionBar"></activity>
+        <activity android:name=".NonProjectFiles.Test"></activity>
+        <activity
+            android:name=".ProductsCategory.CardsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:theme="@style/OriginalThemeNoActionBar" />
         <activity android:name=".Activities.ForgotPasswordActivity" />
         <activity
             android:name=".Activities.RegisterActivity"
@@ -45,7 +51,7 @@
         </activity>
         <activity
             android:name=".Activities.MainActivity"
-            android:theme="@style/OriginalThemeNoActionBar"></activity>
+            android:theme="@style/OriginalThemeNoActionBar" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
