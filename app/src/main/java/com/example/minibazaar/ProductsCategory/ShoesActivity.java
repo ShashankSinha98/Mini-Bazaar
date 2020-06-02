@@ -6,7 +6,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -25,15 +24,13 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.squareup.picasso.Picasso;
 
-public class CardsActivity extends AppCompatActivity {
+public class ShoesActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private StaggeredGridLayoutManager mLayoutManager;
@@ -50,7 +47,7 @@ public class CardsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cards);
+        setContentView(R.layout.activity_shoes);
 
         FirebaseApp.initializeApp(this);
 
@@ -79,7 +76,7 @@ public class CardsActivity extends AppCompatActivity {
         mLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        Query query = firebaseFirestore.collection("Products");
+        Query query = firebaseFirestore.collection("Products").document("101").collection("Shoes");
 
         query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -111,6 +108,7 @@ public class CardsActivity extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull MovieViewHolder viewHolder, final int position, @NonNull GenericProductModel model) {
                 Log.d("xlr8","Populating Data");
                 if(tv_no_item.getVisibility()== View.VISIBLE){
+                    Log.d("xlr8","Anim Vis GONE");
                     tv_no_item.setVisibility(View.GONE);
                 }
 

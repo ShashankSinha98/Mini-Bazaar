@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductsCategory.CardsActivity">
+    tools:context=".ProductsCategory.ShoesActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbarwrap"
@@ -58,18 +58,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/tv_no_cards"
-        android:layout_width="match_parent"
-        android:background="@color/accent"
-        android:layout_height="match_parent"
-        app:lottie_fileName="loadinganim.json"
-        app:lottie_loop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        app:lottie_autoPlay="true"
-        android:onClick="Notifications"/>
-
     <FrameLayout
         android:padding="5dp"
         android:layout_below="@id/toolbarwrap"
@@ -84,6 +72,23 @@
             android:layout_width="match_parent"/>
 
     </FrameLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/tv_no_cards"
+        android:layout_width="match_parent"
+        android:background="@color/accent"
+        android:layout_height="match_parent"
+        app:lottie_fileName="loadinganim.json"
+        app:lottie_loop="true"
+
+        android:layout_below="@id/toolbarwrap"
+        android:visibility="visible"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:lottie_autoPlay="true"
+        android:onClick="Notifications"/>
+
 
 
 

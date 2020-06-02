@@ -122,11 +122,11 @@
                         <ImageView
                             android:id="@+id/visitingcards"
                             style="@style/homegridimage"
-                            android:src="@drawable/visitingcard" />
+                            android:src="@drawable/shoe_icon" />
 
                         <TextView
                             android:layout_below="@id/visitingcards"
-                            android:text="Visiting Cards"
+                            android:text="Shoes"
                             style="@style/homegridtext"/>
 
                     </RelativeLayout>
