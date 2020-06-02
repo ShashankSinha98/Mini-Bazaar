@@ -94,7 +94,7 @@ public class ProfileActivity extends AppCompatActivity {
         wishlistView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(ProfileActivity.this,Wishlist.class));
+                startActivity(new Intent(ProfileActivity.this,WishlistActivity.class));
             }
         });
     }
