@@ -34,6 +34,8 @@ For Paytm payment gateway integration, [click here](https://developer.paytm.com/
 
 ## Features to be added -
 - Notifications
+- Feedback
+- Product Reviews and Ratings
 - About/Contact us
 - Merchant side interface
 
