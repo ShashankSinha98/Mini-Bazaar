@@ -15,7 +15,7 @@ For Paytm payment gateway integration, [click here](https://developer.paytm.com/
 
  | Registration Process                | Ordering Proces                     |
  |-------------------------------------|-------------------------------------|
- |<img src="registration.gif" width="300">| <img src="ordering.gif" width="300">|
+ |<img src="registration_mockup.gif" width="300">| <img src="ordering_mockup.gif" width="300">|
 
 
 <br/>
