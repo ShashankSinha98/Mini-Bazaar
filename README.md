@@ -13,13 +13,13 @@ For Paytm payment gateway integration, [click here](https://developer.paytm.com/
  ## Application Flow
 <br/>
 
- | Registration Process                |
+ | 1. Registration Process                |
  |-------------------------------------|
  |<img src="registration_mockup.gif">| 
  
  <br/>
  
- | Ordering Process                |
+ | 2. Ordering Process                |
  |-------------------------------------|
  |<img src="ordering_mockup.gif">| 
 
