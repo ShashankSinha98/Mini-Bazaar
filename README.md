@@ -2,6 +2,10 @@
 
 This is a general ordering application with material design pattern using firebase database.
 
+- Authentication - [Firebase Authentication](https://firebase.google.com/docs/auth/android/email-link-auth)
+- Database - [Cloud Firestore](https://firebase.google.com/docs/firestore/quickstart)
+- Storage - [Cloud Storage](https://firebase.google.com/docs/storage/android/start)
+
 For Paytm payment gateway integration, [click here](https://developer.paytm.com/docs/v1/android-sdk/)
 
 <br/>
