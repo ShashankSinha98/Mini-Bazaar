@@ -13,10 +13,9 @@ For Paytm payment gateway integration, [click here](https://developer.paytm.com/
  ## Application Flow
 <br/>
 
- | Registration Process                | Ordering Proces                     |
- |-------------------------------------|-------------------------------------|
- |<img src="registration_mockup.gif" width="300">| <img src="ordering_mockup.gif" width="300">|
-
+ | Registration Process                |
+ |-------------------------------------|
+ |<img src="registration_mockup.gif">| 
 
 <br/>
 
