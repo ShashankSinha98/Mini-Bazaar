@@ -1,6 +1,6 @@
 # Mini-Bazaar
 
-This is a general ordering application with material design pattern using firebase database.
+This is a general ordering application with material design pattern using firebase as backend.
 
 - Authentication - [Firebase Authentication](https://firebase.google.com/docs/auth/android/email-link-auth)
 - Database - [Cloud Firestore](https://firebase.google.com/docs/firestore/quickstart)
