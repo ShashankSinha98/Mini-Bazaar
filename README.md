@@ -2,6 +2,23 @@
 
 This is a general ordering application with material design pattern using firebase database. 
 
+<br/>
+
+ ## Application Flow
+<br/>
+
  | Registration Process                | Ordering Proces                     |
  |-------------------------------------|-------------------------------------|
- |<img src="images/0.png" width="250"> | <img src="images/4.png" width="250">|
+ |<img src="registration.gif" width="300">| <img src="ordering.gif" width="300">|
+
+
+<br/>
+
+## Features Integrated
+- App tour
+- Email Verification
+- Wishlist
+- Cart
+- Order History
+- Order Tracking
+- Paytm Payment Gateway
