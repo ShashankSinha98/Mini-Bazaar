@@ -8,4 +8,10 @@
         <item>Unique Products</item>
         <item>Stylish Items</item>
     </string-array>
+
+    <string-array name="radio_buttons">
+        <item>PayPal</item>
+        <item>Paytm</item>
+        <item>COD</item>
+    </string-array>
 </resources>

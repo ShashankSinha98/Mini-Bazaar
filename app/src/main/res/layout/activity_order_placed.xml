@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="58dp"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_clear_black_18dp"
+            android:onClick="finishActivity"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="250dp"
+                app:lottie_fileName="orderplaced.json"
+                android:layout_height="250dp"
+                android:foregroundGravity="center"
+                app:lottie_autoPlay="true"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/fonts"
+                android:gravity="center"
+                android:textColor="#424242"
+                android:text="@string/orderdetails"/>
+
+
+            <TextView
+                android:id="@+id/orderid"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/headingfonts"
+                android:background="@drawable/borderfile"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="FVF1FF12T"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

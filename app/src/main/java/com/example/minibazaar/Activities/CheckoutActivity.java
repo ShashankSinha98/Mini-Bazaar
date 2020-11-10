@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,6 +43,7 @@ import es.dmoral.toasty.Toasty;
 
 public class CheckoutActivity extends AppCompatActivity {
 
+    private static final int MAXLEN = 5;
     private final String TAG = this.getClass().getSimpleName()+"_xlr8";
     @BindView(R.id.delivery_date)
     TextView deliveryDate;
@@ -63,6 +65,9 @@ public class CheckoutActivity extends AppCompatActivity {
     MaterialEditText orderpincode;
 
     private ArrayList<SingleProductModel> cartcollect;
+    private ArrayList<String> placed_order_images;
+    private String orderDateTime;
+    private static final String ALLOWED_CHARACTERS ="0123456789qwertyuiopasdfghjklzxcvbnm";
     private UserSession session;
     private FirebaseFirestore firebaseFirestore;
     private String payment_mode="COD",order_reference_id;
@@ -91,6 +96,8 @@ public class CheckoutActivity extends AppCompatActivity {
         //SharedPreference for Cart Value
         session = new UserSession(getApplicationContext());
         mAuth = FirebaseAuth.getInstance();
+
+        placed_order_images = new ArrayList<>();
 
         //validating session
         session.isLoggedIn();
@@ -175,7 +182,12 @@ public class CheckoutActivity extends AppCompatActivity {
 
 
         if (validateFields(view)) {
-            order_reference_id = getordernumber();
+            order_reference_id = "ORD-"+getRandomString(MAXLEN)+"-Beta";
+            orderDateTime = new SimpleDateFormat("dd.MMM.yyyy-HH.mm.ss").format(new Date());
+
+            for(SingleProductModel singleProductModel : cartcollect){
+                placed_order_images.add(singleProductModel.getPrimage());
+            }
 
             if(payment_mode.equals("COD")) {
                 final KProgressHUD progressDialog = KProgressHUD.create(CheckoutActivity.this)
@@ -189,16 +201,17 @@ public class CheckoutActivity extends AppCompatActivity {
 
 
                 //adding user details to the database under orders table
-                firebaseFirestore.collection("Orders").document(getPlaced_user_mobile_no).collection(currdatetime)
-                        .document("Top Invoice")
+                firebaseFirestore.collection("Orders").document(getPlaced_user_email)
+                        .collection(user.get(UserSession.KEY_NAME)+" Orders").document(currdatetime)
                         .set(getProductObject()).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
 
                         for (final SingleProductModel model : cartcollect) {
 
-                            firebaseFirestore.collection("Orders").document(getPlaced_user_mobile_no).collection(currdatetime)
-                                    .document("Bottom Invoice").collection("Items").add(model).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            firebaseFirestore.collection("Orders").document(getPlaced_user_email)
+                                    .collection(user.get(UserSession.KEY_NAME)+" Orders")
+                                    .document(currdatetime).collection("Items").add(model).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
                                 public void onSuccess(DocumentReference documentReference) {
                                     Log.d(TAG, "Model Added: " + model.getPrname());
@@ -214,7 +227,7 @@ public class CheckoutActivity extends AppCompatActivity {
                         }
 
                         for (final SingleProductModel model : cartcollect) {
-                            firebaseFirestore.collection("Cart").document(getPlaced_user_mobile_no)
+                            firebaseFirestore.collection("Cart").document(getPlaced_user_email)
                                     .collection(user.get(UserSession.KEY_NAME) + " Cart").document(String.valueOf(model.getPrid()))
                                     .delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
@@ -227,6 +240,7 @@ public class CheckoutActivity extends AppCompatActivity {
                                     Log.d(TAG, "Deleting Error: " + e.getMessage());
                                 }
                             });
+
 
                         }
                         session.setCartValue(0);
@@ -328,7 +342,16 @@ public class CheckoutActivity extends AppCompatActivity {
     }
 
     public PlacedOrderModel getProductObject() {
-        return new PlacedOrderModel(order_reference_id,noOfItems.getText().toString(),totalAmount.getText().toString(),deliveryDate.getText().toString(),payment_mode,ordername.getText().toString(),orderemail.getText().toString(),ordernumber.getText().toString(),orderaddress.getText().toString(),orderpincode.getText().toString(),placed_user_name,getPlaced_user_email,getPlaced_user_mobile_no);
+        return new PlacedOrderModel(placed_order_images,"ORDER_PLACED",order_reference_id,orderDateTime,noOfItems.getText().toString(),totalAmount.getText().toString(),deliveryDate.getText().toString(),payment_mode,ordername.getText().toString(),orderemail.getText().toString(),ordernumber.getText().toString(),orderaddress.getText().toString(),orderpincode.getText().toString(),placed_user_name,getPlaced_user_email,getPlaced_user_mobile_no);
+    }
+
+    private static String getRandomString(final int sizeOfRandomString)
+    {
+        final Random random=new Random();
+        final StringBuilder sb=new StringBuilder(sizeOfRandomString);
+        for(int i=0;i<sizeOfRandomString;++i)
+            sb.append(ALLOWED_CHARACTERS.charAt(random.nextInt(ALLOWED_CHARACTERS.length())));
+        return sb.toString();
     }
 
 }

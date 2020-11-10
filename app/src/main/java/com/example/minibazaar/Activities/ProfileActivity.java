@@ -62,8 +62,13 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void inflateImageSlider() {
         ArrayList<SlideModel> slideModels = new ArrayList<>();
-        slideModels.add(new SlideModel("https://www.printstop.co.in/images/flashgallary/large/calendar-diaries-home-banner.jpg"));
-        slideModels.add(new SlideModel("https://www.printstop.co.in/images/flashgallary/large/calendar-diaries-banner.jpg"));
+        slideModels.add(new SlideModel("https://m.media-amazon.com/images/G/31/img19/Wireless/Apple/iPhone11/RiverImages/11Pro/IN_iPhone11Pro_DESKTOP_01._CB437064827_.jpg"));
+        slideModels.add(new SlideModel("https://piunikaweb.com/wp-content/uploads/2019/08/oneplus_7_pro_5g_experience_the_power_of_5g_banner-750x354.jpg"));
+        slideModels.add(new SlideModel("https://lh3.googleusercontent.com/RSyeouwiFX4XVq6iw3H94al0VcXD693tBy2MxhBKCxAHCIfIpdt7wDV47_j2HanPSnTli7JgZ0fYHxESjz0uvVgeCBT3=w1000"));
+        slideModels.add(new SlideModel("https://cdn.metrobrands.com/mochi/media/images/content/Homepage/HOTTMARZZ-BANNER-MOCHI.webp"));
+        slideModels.add(new SlideModel("https://i.pinimg.com/originals/b2/78/7c/b2787cea792bff7d2c33e26ada6436bb.jpg"));
+        slideModels.add(new SlideModel("https://cdnb.artstation.com/p/assets/images/images/016/802/459/large/shuja-shuaib-banner.jpg?1553535424"));
+
         imageSlider.setImageList(slideModels,true);
     }
 
@@ -86,8 +91,8 @@ public class ProfileActivity extends AppCompatActivity {
         updateDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(ProfileActivity.this,UpdateData.class));
-                //finish();
+                startActivity(new Intent(ProfileActivity.this,UpdateDataActivity.class));
+                finish();
             }
         });
 

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/OriginalThemeV2NoActionBar"
+    xmlns:fancy="http://schemas.android.com/tools"
+    >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="#000"
+            style="@style/CustomTheme"
+            android:background="@color/colorAccent">
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_below="@id/toolbarwrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="@drawable/borderfile"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="Order Details"
+                    fancy:fb_textColor="#424242" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total No. of Items : "
+                        style="@style/fonts"
+                        android:textColor="#424242"/>
+
+                    <TextView
+                        android:id="@+id/no_of_items"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/headingfonts"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="10"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount : "
+                        style="@style/fonts"
+                        android:textColor="#424242"/>
+
+                    <TextView
+                        android:id="@+id/total_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/headingfonts"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="15000"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Estimated Delivery Date : "
+                        style="@style/fonts"
+                        android:textColor="#424242"/>
+
+                    <TextView
+                        android:id="@+id/delivery_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/headingfonts"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="28/12/2017"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@style/headingfonts"
+                android:text="Payment Mode :"
+                android:textColor="#424242"/>
+
+
+            <com.whygraphics.multilineradiogroup.MultiLineRadioGroup
+                xmlns:multi_line_radio_group="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_activity_multi_line_radio_group"
+                multi_line_radio_group:max_in_row="3"
+                android:backgroundTint="#FF0000"
+                multi_line_radio_group:default_button="COD"
+                multi_line_radio_group:radio_buttons="@array/radio_buttons"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_width_small"
+                android:background="@color/grey_light"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                style="@style/headingfonts"
+                android:text="Complete Address :"
+                android:textColor="#424242"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ordername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_iconLeft="@drawable/profile"
+                app:met_floatingLabel="highlight" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/orderemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_iconLeft="@drawable/mail"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/ordernumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"
+                app:met_iconLeft="@drawable/smartphone"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                android:inputType="number" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/orderaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Complete address"
+                android:minLines="3"
+                app:met_iconLeft="@drawable/home"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/orderpincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pincode"
+                app:met_iconLeft="@drawable/pincode"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                android:inputType="number"
+                android:layout_marginBottom="15dp"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                style="@style/AppTheme.RoundedCornerMaterialButton"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/ordernow"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="40dp"
+                android:background="@color/colorPrimary"
+                android:padding="17dp"
+                android:onClick="PlaceOrder"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

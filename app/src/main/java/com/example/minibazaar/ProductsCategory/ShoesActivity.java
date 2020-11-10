@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -16,9 +17,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.minibazaar.Activities.CartActivity;
+import com.example.minibazaar.Activities.IndividualProductActivity;
 import com.example.minibazaar.Models.GenericProductModel;
 import com.example.minibazaar.NetworkSync.CheckInternetConnection;
 import com.example.minibazaar.R;
+import com.example.minibazaar.UserSession.UserSession;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,14 +34,19 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class ShoesActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private StaggeredGridLayoutManager mLayoutManager;
     private LottieAnimationView tv_no_item;
+    private String usermobile;
+    private UserSession session;
+    public static ArrayList<Long> wishlist;
 
-
-
+    private final String TAG = this.getClass().getSimpleName()+"_xlr8";
 
     //Getting reference to Firebase Database
     private FirebaseFirestore firebaseFirestore;
@@ -50,6 +59,7 @@ public class ShoesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shoes);
 
         FirebaseApp.initializeApp(this);
+        session = new UserSession(getApplicationContext());
 
         firebaseFirestore = FirebaseFirestore.getInstance();
 
@@ -84,33 +94,29 @@ public class ShoesActivity extends AppCompatActivity {
 
                 if(task.isSuccessful()){
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        Log.d("xlr8", document.getId() + " => " + document.getData());
+                        Log.d(TAG, document.getId() + " => " + document.getData());
                     }
                 } else {
-                    Log.d("xlr8", "Error getting documents.", task.getException());
+                    Log.d(TAG, "Error getting documents.", task.getException());
                 }
 
             }
         });
 
 
-        Log.d("xlr8","Creating Response");
+        Log.d(TAG,"Creating Response");
 
         final FirestoreRecyclerOptions<GenericProductModel> response = new FirestoreRecyclerOptions.Builder<GenericProductModel>()
                 .setQuery(query, GenericProductModel.class)
                 .build();
 
-        Log.d("xlr8","Response Created");
-        Log.d("xlr8","Getting Data");
+        Log.d(TAG,"Response Created");
+        Log.d(TAG,"Getting Data");
         //Say Hello to our new FirebaseUI android Element, i.e., FirebaseRecyclerAdapter
          adapter =new FirestoreRecyclerAdapter<GenericProductModel, MovieViewHolder>(response) {
             @Override
             protected void onBindViewHolder(@NonNull MovieViewHolder viewHolder, final int position, @NonNull GenericProductModel model) {
-                Log.d("xlr8","Populating Data");
-                if(tv_no_item.getVisibility()== View.VISIBLE){
-                    Log.d("xlr8","Anim Vis GONE");
-                    tv_no_item.setVisibility(View.GONE);
-                }
+                Log.d(TAG,"Populating Data");
 
                 viewHolder.cardname.setText(model.getCardname());
                 viewHolder.cardprice.setText("₹ "+Float.toString(model.getCardprice()));
@@ -119,9 +125,9 @@ public class ShoesActivity extends AppCompatActivity {
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //Intent intent = new Intent(CardsActivity.this,IndividualProduct.class);
-                        //intent.putExtra("product",getItem(position));
-                        //startActivity(intent);
+                        Intent intent = new Intent(ShoesActivity.this, IndividualProductActivity.class);
+                        intent.putExtra("product",getItem(position));
+                        startActivity(intent);
                     }
                 });
 
@@ -130,7 +136,7 @@ public class ShoesActivity extends AppCompatActivity {
             @NonNull
             @Override
             public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup group, int viewType) {
-                Log.d("xlr8","Inflating Layout");
+                Log.d(TAG,"Inflating Layout");
                 View view = LayoutInflater.from(group.getContext())
                         .inflate(R.layout.cards_cardview_layout, group, false);
 
@@ -143,10 +149,12 @@ public class ShoesActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         mRecyclerView.setAdapter(adapter);
 
+        wishlist = session.getWishlist(tv_no_item);
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Log.d("xlr8_res", String.valueOf(response.getSnapshots()));
+                Log.d(TAG, String.valueOf(response.getSnapshots()));
 
             }
         },10000);
@@ -160,8 +168,8 @@ public class ShoesActivity extends AppCompatActivity {
     }
 
     public void viewCart(View view) {
-        //startActivity(new Intent(Cards.this,Cart.class));
-        //finish();
+        startActivity(new Intent(ShoesActivity.this, CartActivity.class));
+        finish();
     }
 
     //viewHolder for our Firebase UI
@@ -170,7 +178,6 @@ public class ShoesActivity extends AppCompatActivity {
         TextView cardname;
         ImageView cardimage;
         TextView cardprice;
-
         View mView;
         public MovieViewHolder(View v) {
             super(v);
@@ -184,14 +191,14 @@ public class ShoesActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("xlr8","Adapter Listening");
+        Log.d(TAG,"Adapter Listening");
         adapter.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("xlr8","Adapter Not  Listening");
+        Log.d(TAG,"Adapter Not  Listening");
         adapter.stopListening();
     }
 
@@ -208,4 +215,5 @@ public class ShoesActivity extends AppCompatActivity {
         //check Internet Connection
         new CheckInternetConnection(this).checkConnection();
     }
+
 }

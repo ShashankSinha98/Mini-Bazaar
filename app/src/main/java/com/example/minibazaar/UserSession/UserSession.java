@@ -4,13 +4,24 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
+import android.view.View;
 
+import androidx.annotation.NonNull;
+
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.minibazaar.Activities.LoginActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UserSession {
 
+    private final String TAG = this.getClass().getSimpleName();
     // Shared Preferences
     SharedPreferences pref;
 
@@ -53,9 +64,13 @@ public class UserSession {
     // check first time app launch
     public static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
+    private FirebaseFirestore firebaseFirestore;
+
+
     // Constructor
     public UserSession(Context context){
         this.context = context;
+        this.firebaseFirestore = FirebaseFirestore.getInstance();
         pref = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
     }
@@ -216,6 +231,36 @@ public class UserSession {
 
     public boolean isFirstTimeLaunch() {
         return pref.getBoolean(IS_FIRST_TIME_LAUNCH, true);
+    }
+
+
+    // Getting Id's of all the product that are in Wishlist database
+    public ArrayList<Long> getWishlist(final LottieAnimationView view){
+
+        final ArrayList<Long> wishlistProductIds = new ArrayList<>();
+        wishlistProductIds.clear();
+        String usermobile = this.getUserDetails().get(UserSession.KEY_MOBiLE);
+        String username = this.getUserDetails().get(UserSession.KEY_NAME);
+
+        firebaseFirestore.collection("Wishlist").document(usermobile).collection(username+" Wishlist").get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+
+                        if (task.isSuccessful()) {
+
+                            view.setVisibility(View.INVISIBLE);
+
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d(TAG, document.getId() + " => " + document.getData());
+                                wishlistProductIds.add((Long) document.getData().get("prid"));
+                            }
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
+                        }
+                    }});
+
+        return wishlistProductIds;
     }
 }
 

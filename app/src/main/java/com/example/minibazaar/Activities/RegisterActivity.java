@@ -195,7 +195,8 @@ public class RegisterActivity extends AppCompatActivity {
                                                         Log.d(TAG+"_TXN","4. MAIN IMAGE SAVED");
                                                         Uri downloadUri = task.getResult();
 
-                                                        compressBitmap(downloadUri,name, mobile,email);
+                                                        //compressBitmap(downloadUri,name, mobile,email);
+                                                        storeToFirestore(name, mobile,downloadUri, email);
 
 
                                                     } else {
@@ -566,6 +567,8 @@ public class RegisterActivity extends AppCompatActivity {
         new CheckInternetConnection(this).checkConnection();
     }
 
+    /*
+    FOR COMPRESSING IMAGE
     private void compressBitmap(final Uri downloadUri, final String user_name, final String user_number, final String user_email) {
 
         Log.d(TAG+"_TXN","5. COMPRESSING IMAGE");
@@ -667,9 +670,9 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
-    }
+    } */
 
-    private void storeToFirestore(String user_name, String user_number,  Uri downloadUri, Uri thumbUri, String user_email) {
+    private void storeToFirestore(String user_name, String user_number,  Uri downloadUri, String user_email) {
 
 
         Log.d(TAG+"_TXN","8. SAVING DATA TO FIRESTORE");
@@ -678,7 +681,6 @@ public class RegisterActivity extends AppCompatActivity {
         Map<String, String> userMap = new HashMap<>();
         userMap.put("name",user_name);
         userMap.put("image",downloadUri.toString());
-        userMap.put("thumb_image",thumbUri.toString());
         userMap.put("number", user_number);
         userMap.put("email",user_email);
 

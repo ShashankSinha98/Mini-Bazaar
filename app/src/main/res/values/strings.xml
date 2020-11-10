@@ -66,4 +66,19 @@
     Phone : +91-9650908741\n
     Email : sinhashashank.98@gmail.com\n
     Address : B-5/384, Yamuna Vihar, Delhi ( 110053 )</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="orderdetails">Your Order has been Placed Succesfully. \n Here is your Unique Order Id !</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="your_transaction_is_being_processed">Your Transaction Is Being Processed</string>
+    <string name="order_history">Order History</string>
+    <string name="default_notification_channel_id">1</string>
 </resources>

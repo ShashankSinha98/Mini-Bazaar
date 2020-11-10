@@ -199,11 +199,11 @@
                         <ImageView
                             android:id="@+id/Stationary"
                             style="@style/homegridimage"
-                            android:src="@drawable/pens" />
+                            android:src="@drawable/sunglasses" />
 
                         <TextView
                             android:layout_below="@id/Stationary"
-                            android:text="Stationary"
+                            android:text="Sunglasses"
                             style="@style/homegridtext"/>
 
                     </RelativeLayout>
@@ -229,11 +229,11 @@
                         <ImageView
                             android:id="@+id/calendars"
                             style="@style/homegridimage"
-                            android:src="@drawable/calendar" />
+                            android:src="@drawable/smartphone_color" />
 
                         <TextView
                             android:layout_below="@id/calendars"
-                            android:text="Calendars"
+                            android:text="Smartphones"
                             style="@style/homegridtext"/>
 
                     </RelativeLayout>
@@ -251,11 +251,11 @@
                         <ImageView
                             android:id="@+id/keychain"
                             style="@style/homegridimage"
-                            android:src="@drawable/keychain" />
+                            android:src="@drawable/laptop" />
 
                         <TextView
                             android:layout_below="@id/keychain"
-                            android:text="Keychains"
+                            android:text="Laptops"
                             style="@style/homegridtext"/>
 
                     </RelativeLayout>

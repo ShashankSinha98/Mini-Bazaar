@@ -10,6 +10,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -43,6 +44,7 @@ import com.mikepenz.materialdrawer.util.DrawerImageLoader;
 import com.mikepenz.materialdrawer.util.DrawerUIUtils;
 import com.mikepenz.materialize.util.UIUtils;
 import com.squareup.picasso.Picasso;
+import com.webianks.easy_feedback.EasyFeedback;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         new CheckInternetConnection(this).checkConnection();
 
         session = new UserSession(getApplicationContext());
+        Log.d("xlr8_wlv", String.valueOf(session.getWishlistValue()));
 
         Typeface typeface = ResourcesCompat.getFont(this, R.font.blacklist);
         TextView appname = findViewById(R.id.appname);
@@ -133,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
         PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName(R.string.myprofile).withIcon(R.drawable.profile);
         PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName(R.string.wishlist).withIcon(R.drawable.wishlist);
         PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName(R.string.cart).withIcon(R.drawable.cart);
+        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(5).withName(R.string.order_history).withIcon(R.drawable.order_hist_icon);
         PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName(R.string.logout).withIcon(R.drawable.logout);
 
         SecondaryDrawerItem item7 = new SecondaryDrawerItem().withIdentifier(7).withName("Offers").withIcon(R.drawable.tag);
@@ -155,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 .withGenerateMiniDrawer(true)
                 .withTranslucentStatusBar(true)
                 .withActionBarDrawerToggleAnimated(true)
-                .addDrawerItems(item1,item2,item3,item4,item5, new DividerDrawerItem(), item7, item8, item9, item10,new DividerDrawerItem(),item12,item13).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                .addDrawerItems(item1,item2,item3,item4,item6,item5, new DividerDrawerItem(), item7, item8, item9, item10,new DividerDrawerItem(),item12,item13).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
@@ -167,18 +171,57 @@ public class MainActivity extends AppCompatActivity {
                                 }
                                 break;
                             case 2:
+                                result.closeDrawer();
                                 startActivity(new Intent(MainActivity.this, ProfileActivity.class));
                                 break;
                             case 3:
-                                //startActivity(new Intent(MainActivity.this, Wishlist.class));
+                                Log.d("xlr8_wl","WLA Called");
+                                result.closeDrawer();
+                                startActivity(new Intent(MainActivity.this, WishlistActivity.class));
                                 break;
                             case 4:
-                                //startActivity(new Intent(MainActivity.this, Cart.class));
+                                startActivity(new Intent(MainActivity.this, CartActivity.class));
+                                result.closeDrawer();
                                 break;
+
                             case 5:
+                                startActivity(new Intent(MainActivity.this, OrderHistoryActivity.class));
+                                result.closeDrawer();
+                                break;
+
+                            case 6:
                                 session.logoutUser();
                                 finish();
                                 break;
+
+                            case 8:
+                                //startActivity(new Intent(MainActivity.this, NotificationActivity.class));
+                                break;
+
+                            case 10:
+                                new EasyFeedback.Builder(MainActivity.this)
+                                        .withEmail("sinhashashank.98@gmail.com")
+                                        .withSystemInfo()
+                                        .build()
+                                        .start();
+                                break;
+
+
+                            case 13:
+                                session.setFirstTimeLaunch(true);
+                                result.closeDrawer();
+                                startActivity(new Intent(MainActivity.this, WelcomeActivity.class));
+                                finish();
+                                break;
+
+                            case 14:
+                                if (result != null && result.isDrawerOpen()) {
+                                    result.closeDrawer();
+                                }
+                                tapview();
+                                break;
+                            default:
+                                Toast.makeText(MainActivity.this, "Default", Toast.LENGTH_LONG).show();
                         }
 
                         return true;
@@ -234,8 +277,13 @@ public class MainActivity extends AppCompatActivity {
     private void inflateImageSlider() {
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
-        slideModels.add(new SlideModel("https://www.printstop.co.in/images/flashgallary/large/calendar-diaries-home-banner.jpg"));
-        slideModels.add(new SlideModel("https://www.printstop.co.in/images/flashgallary/large/calendar-diaries-banner.jpg"));
+        slideModels.add(new SlideModel("https://m.media-amazon.com/images/G/31/img19/Wireless/Apple/iPhone11/RiverImages/11Pro/IN_iPhone11Pro_DESKTOP_01._CB437064827_.jpg"));
+        slideModels.add(new SlideModel("https://piunikaweb.com/wp-content/uploads/2019/08/oneplus_7_pro_5g_experience_the_power_of_5g_banner-750x354.jpg"));
+        slideModels.add(new SlideModel("https://lh3.googleusercontent.com/RSyeouwiFX4XVq6iw3H94al0VcXD693tBy2MxhBKCxAHCIfIpdt7wDV47_j2HanPSnTli7JgZ0fYHxESjz0uvVgeCBT3=w1000"));
+        slideModels.add(new SlideModel("https://cdn.metrobrands.com/mochi/media/images/content/Homepage/HOTTMARZZ-BANNER-MOCHI.webp"));
+        slideModels.add(new SlideModel("https://i.pinimg.com/originals/b2/78/7c/b2787cea792bff7d2c33e26ada6436bb.jpg"));
+        slideModels.add(new SlideModel("https://cdnb.artstation.com/p/assets/images/images/016/802/459/large/shuja-shuaib-banner.jpg?1553535424"));
+
         imageSlider.setImageList(slideModels,true);
 
     }
@@ -339,7 +387,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void viewCart(View view) {
-        //startActivity(new Intent(MainActivity.this, Cart.class));
+        startActivity(new Intent(MainActivity.this, CartActivity.class));
     }
 
     public void tshirtActivity(View view) {

@@ -16,7 +16,43 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
-        <activity android:name=".NonProjectFiles.Test"></activity>
+        <activity android:name=".NonProjectFiles.FCMTestActivity"></activity>
+        <activity
+            android:name=".Activities.OrderTrackActivity"
+            android:theme="@style/OriginalThemeNoActionBar"></activity>
+        <activity
+            android:name=".Activities.OrderHistoryActivity"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".Activities.PaymentActivity"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".NonProjectFiles.OrderTrackTest"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".Activities.OrderPlacedActivity"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".Activities.CheckoutActivity"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".Activities.CartActivity"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".Activities.UpdateDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".Activities.WishlistActivity"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.IndividualProductActivity"
+            android:theme="@style/OriginalThemeNoActionBar" />
+        <activity android:name=".NonProjectFiles.Test" />
         <activity
             android:name=".ProductsCategory.ShoesActivity"
             android:screenOrientation="portrait"
@@ -55,6 +91,20 @@
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <service
+            android:name=".java.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
+
+
 
 </manifest>

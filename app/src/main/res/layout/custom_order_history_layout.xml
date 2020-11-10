@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="10dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="#55E0E0E0"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/order_total_amt"
+                android:layout_marginRight="5dp"
+                style="@style/TextAppearance.AppCompat.Small"
+                tools:text="Order Placed"
+                android:textColor="@color/md_green_800"/>
+
+            <TextView
+                android:id="@+id/no_of_items"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/order_date"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Small"
+                tools:text="3 Items"/>
+
+            <TextView
+                android:id="@+id/order_date"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                tools:text="23 Jun 2020"
+                style="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/order_total_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="₹2999.0"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                style="@style/TextAppearance.AppCompat.Large"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/no_of_items"
+                >
+                <ImageView
+                    android:id="@+id/img_1"
+
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_rounded"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/shoe_4"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toEndOf="@id/cv_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/no_of_items"
+                >
+                <ImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_rounded"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/shoe_1"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toEndOf="@id/cv_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/no_of_items"
+                >
+                <ImageView
+                    android:id="@+id/img_3"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_rounded"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/shoe_2"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toEndOf="@id/cv_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/no_of_items"
+                >
+                <ImageView
+                    android:id="@+id/img_4"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_rounded"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/shoe_3"
+                    />
+
+                <ImageView
+                    android:id="@+id/extra_img_iv"
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#99000000"
+                    android:padding="15dp"
+                    android:src="@drawable/white_add_icon"
+                    />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/track_history"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="5dp"
+                app:layout_constraintStart_toEndOf="@+id/cv_4"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="35dp"
+                android:background="@drawable/rightarrow"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
