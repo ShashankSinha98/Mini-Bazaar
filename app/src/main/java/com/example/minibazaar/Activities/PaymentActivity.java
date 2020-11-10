@@ -70,7 +70,7 @@ public class PaymentActivity extends AppCompatActivity implements PaytmPaymentTr
         Log.d("xlr8_PYTM_cdt", String.valueOf(currdatetime));
 
 
-        merchantId = "auxpee35192428915202";
+        merchantId = "PUT YOUR ID";
         FirebaseApp.initializeApp(this);
         firebaseFirestore = FirebaseFirestore.getInstance();
 
