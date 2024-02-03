@@ -58,7 +58,7 @@ dependencies {
     implementation 'com.github.yesidlazaro:GmailBackground:1.2.0'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
     implementation 'id.zelory:compressor:2.1.0'
-    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
     implementation 'com.tomer:fadingtextview:2.5'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'

@@ -86,11 +86,11 @@
                     android:id="@+id/slider"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    app:auto_cycle="true"
-                    app:placeholder="@drawable/loading"
-                    app:error_image="@drawable/error"
-                    app:delay="0"
-                    app:period="4000" />
+                    app:iss_auto_cycle="true"
+                    app:iss_placeholder="@drawable/loading"
+                    app:iss_error_image="@drawable/error"
+                    app:iss_delay="0"
+                    app:iss_period="4000" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profilepic"
